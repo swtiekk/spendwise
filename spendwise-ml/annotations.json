@@ -1,0 +1,227 @@
+[
+  {
+    "file": "receipt_01.jpg",
+    "condition": "fresh",
+    "ground_truth": {
+      "transaction_amount": 50.0,
+      "transaction_date": "2026-05-10",
+      "store_branch": "7-Eleven Neribros Inc. Store#2006",
+      "item_descriptions": [
+        "NatureSPuriDW500ml",
+        "JnJ Mr Chips 98g"
+      ],
+      "expense_category": "food"
+    }
+  },
+  {
+    "file": "receipt_02.jpg",
+    "condition": "fresh",
+    "ground_truth": {
+      "transaction_amount": 203.0,
+      "transaction_date": "2026-05-10",
+      "store_branch": "7-Eleven Neribros Inc. Store#2006",
+      "item_descriptions": [
+        "7-CONNECT GCash Cash In"
+      ],
+      "expense_category": "utilities"
+    }
+  },
+  {
+    "file": "receipt_03.jpg",
+    "condition": "fresh",
+    "ground_truth": {
+      "transaction_amount": 44.0,
+      "transaction_date": "2026-05-10",
+      "store_branch": "7-Eleven Neribros Inc. Store#2006",
+      "item_descriptions": [
+        "SelectaBPipCaC60ml x2"
+      ],
+      "expense_category": "food"
+    }
+  },
+  {
+    "file": "receipt_04.jpg",
+    "condition": "fresh",
+    "ground_truth": {
+      "transaction_amount": 24.0,
+      "transaction_date": "2026-05-11",
+      "store_branch": "7-Eleven Rhainella Store#2423",
+      "item_descriptions": [
+        "7SelectDistDW525ml"
+      ],
+      "expense_category": "food"
+    }
+  },
+  {
+    "file": "receipt_05.jpg",
+    "condition": "fresh",
+    "ground_truth": {
+      "transaction_amount": 1300.0,
+      "transaction_date": "2026-05-10",
+      "store_branch": "7-Connect Kiosk",
+      "item_descriptions": [
+        "GCash Cash In"
+      ],
+      "expense_category": "utilities"
+    }
+  },
+  {
+    "file": "receipt_06.jpg",
+    "condition": "fresh",
+    "ground_truth": {
+      "transaction_amount": 2000.0,
+      "transaction_date": "2026-05-11",
+      "store_branch": "7-Eleven Rhainella Store#2423",
+      "item_descriptions": [
+        "7-CONNECT Bills Payment"
+      ],
+      "expense_category": "utilities"
+    }
+  },
+  {
+    "file": "receipt_07.jpg",
+    "condition": "fresh",
+    "ground_truth": {
+      "transaction_amount": 11.0,
+      "transaction_date": "2026-05-11",
+      "store_branch": "7-Eleven Rhainella Store#2423",
+      "item_descriptions": [
+        "Cloud9ClassiBar28g"
+      ],
+      "expense_category": "food"
+    }
+  },
+  {
+    "file": "receipt_08.jpg",
+    "condition": "fresh",
+    "ground_truth": {
+      "transaction_amount": 73.0,
+      "transaction_date": "2026-05-11",
+      "store_branch": "7-Eleven Rhainella Store#2423",
+      "item_descriptions": [
+        "C2GreenTApple1L",
+        "IceCupSelling"
+      ],
+      "expense_category": "food"
+    }
+  },
+  {
+    "file": "receipt_09.jpg",
+    "condition": "faded",
+    "ground_truth": {
+      "transaction_amount": 10.0,
+      "transaction_date": "2026-05-11",
+      "store_branch": "7-Eleven Rhainella Store#2423",
+      "item_descriptions": [
+        "NaturesSDWter350ml"
+      ],
+      "expense_category": "food"
+    }
+  },
+  {
+    "file": "receipt_10.jpg",
+    "condition": "faded",
+    "ground_truth": {
+      "transaction_amount": 81.0,
+      "transaction_date": "2026-05-11",
+      "store_branch": "7-Eleven Rhainella Store#2423",
+      "item_descriptions": [
+        "7Select PH9DW525ml",
+        "7FRSHSIOPPREMASADO"
+      ],
+      "expense_category": "food"
+    }
+  },
+  {
+    "file": "receipt_11.jpg",
+    "condition": "faded",
+    "ground_truth": {
+      "transaction_amount": 59.0,
+      "transaction_date": "2026-05-10",
+      "store_branch": "7-Eleven Avida Towers Store#4245",
+      "item_descriptions": [
+        "7-CONNECT Top Up"
+      ],
+      "expense_category": "utilities"
+    }
+  },
+  {
+    "file": "receipt_12.jpg",
+    "condition": "faded",
+    "ground_truth": {
+      "transaction_amount": 7.0,
+      "transaction_date": "2026-05-11",
+      "store_branch": "7-Eleven Rhainella Store#2423",
+      "item_descriptions": [
+        "ModCotMaxNnWngSngl"
+      ],
+      "expense_category": "food"
+    }
+  },
+  {
+    "file": "receipt_13.jpg",
+    "condition": "faded",
+    "ground_truth": {
+      "transaction_amount": 22.0,
+      "transaction_date": "2026-05-11",
+      "store_branch": "7-Eleven Rhainella Store#2423",
+      "item_descriptions": [
+        "Cloud9Classibar28g x2"
+      ],
+      "expense_category": "food"
+    }
+  },
+  {
+    "file": "receipt_14.jpg",
+    "condition": "faded",
+    "ground_truth": {
+      "transaction_amount": 8.0,
+      "transaction_date": "2026-05-10",
+      "store_branch": "7-Eleven JR Borja St. Store#2061",
+      "item_descriptions": [
+        "TigerBitesChclt18g"
+      ],
+      "expense_category": "food"
+    }
+  },
+  {
+    "file": "receipt_15.jpg",
+    "condition": "withered",
+    "ground_truth": {
+      "transaction_amount": 38.0,
+      "transaction_date": "2026-05-10",
+      "store_branch": "7-Eleven Avida Towers Store#4245",
+      "item_descriptions": [
+        "ArcysRootbeer500ml"
+      ],
+      "expense_category": "food"
+    }
+  },
+  {
+    "file": "receipt_16.jpg",
+    "condition": "withered",
+    "ground_truth": {
+      "transaction_amount": 50.0,
+      "transaction_date": "2026-05-10",
+      "store_branch": "7-Eleven Avida Towers Store#4245",
+      "item_descriptions": [
+        "Toys and Novelty P",
+        "Toys and Novelty P"
+      ],
+      "expense_category": "shopping"
+    }
+  },
+  {
+    "file": "receipt_17.jpg",
+    "condition": "withered",
+    "ground_truth": {
+      "transaction_amount": 59.0,
+      "transaction_date": "2026-05-10",
+      "store_branch": "7-Eleven Avida Towers Store#4245",
+      "item_descriptions": [
+        "7-CONNECT Top Up Duplicate"
+      ],
+      "expense_category": "utilities"
+    }
+  }
+]

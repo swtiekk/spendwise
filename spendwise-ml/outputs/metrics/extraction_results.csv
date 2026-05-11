@@ -1,0 +1,18 @@
+filename,condition,true_amount,extracted_amount,true_date,extracted_date,extracted_store,extracted_category,amount_correct,date_correct
+receipt_01.jpg,fresh,50.0,,2026-05-10,2026-05-10,,snacks,False,True
+receipt_02.jpg,fresh,203.0,,2026-05-10,,,utilities,False,False
+receipt_03.jpg,fresh,44.0,44.0,2026-05-10,2026-05-10,,beverage,True,True
+receipt_04.jpg,fresh,24.0,24.0,2026-05-11,2020-08-01,RHATNELLA CONVENZENCE STORE,others,True,False
+receipt_05.jpg,fresh,1300.0,,2026-05-10,,,utilities,False,False
+receipt_06.jpg,fresh,2000.0,,2026-05-11,,,utilities,False,False
+receipt_07.jpg,fresh,11.0,,2026-05-11,2020-08-01,,others,False,False
+receipt_08.jpg,fresh,73.0,,2026-05-11,,,others,False,False
+receipt_09.jpg,faded,10.0,,2026-05-11,,,others,False,False
+receipt_10.jpg,faded,81.0,81.0,2026-05-11,,,food,True,False
+receipt_11.jpg,faded,59.0,59.0,2026-05-10,2026-05-10,,utilities,True,True
+receipt_12.jpg,faded,7.0,,2026-05-11,2020-08-01,,beverage,False,False
+receipt_13.jpg,faded,22.0,22.0,2026-05-11,2026-05-11,,others,True,True
+receipt_14.jpg,faded,8.0,,2026-05-10,,,beverage,False,False
+receipt_15.jpg,withered,38.0,38.0,2026-05-10,2026-05-10,,others,True,True
+receipt_16.jpg,withered,50.0,50.0,2026-05-10,2026-05-10,,others,True,True
+receipt_17.jpg,withered,59.0,59.0,2026-05-10,2026-05-10,,utilities,True,True
