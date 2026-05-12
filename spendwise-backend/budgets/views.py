@@ -29,24 +29,34 @@ def budget_summary(request):
         budget = Budget.objects.filter(
             user=request.user
         ).latest('created_at')
+
+        transactions = Transaction.objects.filter(
+            user=request.user,
+            transaction_date__gte=budget.start_date,
+            transaction_date__lte=budget.end_date,
+        )
+
+        total_spent = sum(t.amount for t in transactions)
+        remaining   = Decimal(str(budget.income)) - Decimal(str(total_spent))
+
+        return Response({
+            'income':       budget.income,
+            'cycle':        budget.cycle,
+            'start_date':   budget.start_date,
+            'end_date':     budget.end_date,
+            'total_spent':  total_spent,
+            'remaining':    remaining,
+            'transactions': len(transactions),
+        })
+
     except Budget.DoesNotExist:
-        return Response({'error': 'No budget found'}, status=status.HTTP_404_NOT_FOUND)
-
-    transactions = Transaction.objects.filter(
-        user=request.user,
-        transaction_date__gte=budget.start_date,
-        transaction_date__lte=budget.end_date,
-    )
-
-    total_spent = sum(t.amount for t in transactions)
-    remaining   = Decimal(str(budget.income)) - Decimal(str(total_spent))
-
-    return Response({
-        'income':       budget.income,
-        'cycle':        budget.cycle,
-        'start_date':   budget.start_date,
-        'end_date':     budget.end_date,
-        'total_spent':  total_spent,
-        'remaining':    remaining,
-        'transactions': len(transactions),
-    })
+        # Return default zeroed-out summary for new users
+        return Response({
+            'income':       0,
+            'cycle':        'N/A',
+            'start_date':   None,
+            'end_date':     None,
+            'total_spent':  0,
+            'remaining':    0,
+            'transactions': 0,
+        })
