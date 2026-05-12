@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Replace with your machine's IP address if testing on a physical device
-const BASE_URL = 'http://192.168.100.11:8000/api'; // Standard Android Emulator IP for localhost
+const BASE_URL = 'http://10.146.81.223:8000/api'; // Standard Android Emulator IP for localhost
 
 const api = axios.create({
   baseURL: BASE_URL,

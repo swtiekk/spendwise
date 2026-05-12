@@ -8,10 +8,12 @@ import RegisterScreen from '../screens/RegisterScreen';
 import DashboardScreen from '../screens/DashboardScreen';
 import TransactionListScreen from '../screens/TransactionListScreen';
 import AddTransactionScreen from '../screens/AddTransactionScreen';
-import SetBudgetScreen from '../screens/SetBudgetScreen';
+import { SetBudgetScreen } from '../screens/SetBudgetScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import CameraScreen from '../screens/CameraScreen';
 import ReviewReceiptScreen from '../screens/ReviewReceiptScreen';
+
+console.log('SetBudgetScreen:', SetBudgetScreen);
 
 const Stack = createNativeStackNavigator();
 
@@ -60,7 +62,7 @@ export default function AppNavigator() {
           options={{ title: 'Manual Entry' }}
         />
         <Stack.Screen 
-          name="SetBudget" 
+          name="SetBudgetScreen" 
           component={SetBudgetScreen} 
           options={{ title: 'Budget Settings' }}
         />

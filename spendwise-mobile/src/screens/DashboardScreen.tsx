@@ -68,7 +68,7 @@ const DashboardScreen = ({ navigation }: any) => {
         </View>
 
         {/* Budget Card */}
-        <TouchableOpacity onPress={() => navigation.navigate('SetBudget')}>
+        <TouchableOpacity onPress={() => navigation.navigate('SetBudgetScreen')}>
           <View style={styles.budgetCard}>
             <View>
               <Text style={styles.budgetLabel}>Remaining Balance</Text>

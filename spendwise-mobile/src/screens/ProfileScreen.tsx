@@ -52,7 +52,7 @@ const ProfileScreen = ({ navigation }: any) => {
       </View>
 
       <View style={styles.menu}>
-        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('SetBudget')}>
+        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('SetBudgetScreen')}>
           <Settings color="#64748b" size={20} />
           <Text style={styles.menuText}>Budget Settings</Text>
           <ChevronRight color="#cbd5e1" size={20} />
