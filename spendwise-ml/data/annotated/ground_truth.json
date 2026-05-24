@@ -107,7 +107,7 @@
   },
   {
     "file": "receipt_09.jpg",
-    "condition": "faded",
+    "condition": "moderately_faded",
     "ground_truth": {
       "transaction_amount": 10.0,
       "transaction_date": "2026-05-11",
@@ -120,7 +120,7 @@
   },
   {
     "file": "receipt_10.jpg",
-    "condition": "faded",
+    "condition": "moderately_faded",
     "ground_truth": {
       "transaction_amount": 81.0,
       "transaction_date": "2026-05-11",
@@ -134,7 +134,7 @@
   },
   {
     "file": "receipt_11.jpg",
-    "condition": "faded",
+    "condition": "moderately_faded",
     "ground_truth": {
       "transaction_amount": 59.0,
       "transaction_date": "2026-05-10",
@@ -147,7 +147,7 @@
   },
   {
     "file": "receipt_12.jpg",
-    "condition": "faded",
+    "condition": "moderately_faded",
     "ground_truth": {
       "transaction_amount": 7.0,
       "transaction_date": "2026-05-11",
@@ -160,7 +160,7 @@
   },
   {
     "file": "receipt_13.jpg",
-    "condition": "faded",
+    "condition": "moderately_faded",
     "ground_truth": {
       "transaction_amount": 22.0,
       "transaction_date": "2026-05-11",
@@ -173,7 +173,7 @@
   },
   {
     "file": "receipt_14.jpg",
-    "condition": "faded",
+    "condition": "moderately_faded",
     "ground_truth": {
       "transaction_amount": 8.0,
       "transaction_date": "2026-05-10",
@@ -186,7 +186,7 @@
   },
   {
     "file": "receipt_15.jpg",
-    "condition": "withered",
+    "condition": "heavily_faded",
     "ground_truth": {
       "transaction_amount": 38.0,
       "transaction_date": "2026-05-10",
@@ -199,7 +199,7 @@
   },
   {
     "file": "receipt_16.jpg",
-    "condition": "withered",
+    "condition": "heavily_faded",
     "ground_truth": {
       "transaction_amount": 50.0,
       "transaction_date": "2026-05-10",
@@ -213,7 +213,7 @@
   },
   {
     "file": "receipt_17.jpg",
-    "condition": "withered",
+    "condition": "heavily_faded",
     "ground_truth": {
       "transaction_amount": 59.0,
       "transaction_date": "2026-05-10",
@@ -222,6 +222,72 @@
         "7-CONNECT Top Up Duplicate"
       ],
       "expense_category": "utilities"
+    }
+  },
+  {
+    "file": "receipt_18.jpg",
+    "condition": "fresh",
+    "ground_truth": {
+      "transaction_amount": 48.0,
+      "transaction_date": "2026-05-20",
+      "store_branch": "7-Eleven Store#1891",
+      "item_descriptions": [
+        "NaturesSDWter350ml",
+        "MMPlainEnsymda55g"
+      ],
+      "expense_category": "food"
+    }
+  },
+  {
+    "file": "receipt_19.jpg",
+    "condition": "fresh",
+    "ground_truth": {
+      "transaction_amount": 10.0,
+      "transaction_date": "2026-05-20",
+      "store_branch": "7-Eleven Store#1891",
+      "item_descriptions": [
+        "NaturesSDWter350ml"
+      ],
+      "expense_category": "food"
+    }
+  },
+  {
+    "file": "receipt_20.jpg",
+    "condition": "fresh",
+    "ground_truth": {
+      "transaction_amount": 12.0,
+      "transaction_date": "2026-05-24",
+      "store_branch": "7-Eleven Store#2840",
+      "item_descriptions": [
+        "RebiscoHoneyBut32g"
+      ],
+      "expense_category": "food"
+    }
+  },
+  {
+    "file": "receipt_21.jpg",
+    "condition": "fresh",
+    "ground_truth": {
+      "transaction_amount": 20.0,
+      "transaction_date": "2026-05-24",
+      "store_branch": "7-Eleven Store#2840",
+      "item_descriptions": [
+        "Toys and Novelty P"
+      ],
+      "expense_category": "shopping"
+    }
+  },
+  {
+    "file": "receipt_22.jpg",
+    "condition": "fresh",
+    "ground_truth": {
+      "transaction_amount": 15.0,
+      "transaction_date": "2026-05-24",
+      "store_branch": "7-Eleven Store#2840",
+      "item_descriptions": [
+        "NaturesPur DW500ml"
+      ],
+      "expense_category": "food"
     }
   }
 ]

@@ -92,10 +92,10 @@ annotations = [
             "expense_category": "food"
         }
     },
-    # ── FADED ──────────────────────────────────────────────
+    # ── MODERATELY FADED ───────────────────────────────────
     {
         "file": "receipt_09.jpg",
-        "condition": "faded",
+        "condition": "moderately_faded",
         "ground_truth": {
             "transaction_amount": 10.00,
             "transaction_date": "2026-05-11",
@@ -106,7 +106,7 @@ annotations = [
     },
     {
         "file": "receipt_10.jpg",
-        "condition": "faded",
+        "condition": "moderately_faded",
         "ground_truth": {
             "transaction_amount": 81.00,
             "transaction_date": "2026-05-11",
@@ -117,7 +117,7 @@ annotations = [
     },
     {
         "file": "receipt_11.jpg",
-        "condition": "faded",
+        "condition": "moderately_faded",
         "ground_truth": {
             "transaction_amount": 59.00,
             "transaction_date": "2026-05-10",
@@ -128,7 +128,7 @@ annotations = [
     },
     {
         "file": "receipt_12.jpg",
-        "condition": "faded",
+        "condition": "moderately_faded",
         "ground_truth": {
             "transaction_amount": 7.00,
             "transaction_date": "2026-05-11",
@@ -139,7 +139,7 @@ annotations = [
     },
     {
         "file": "receipt_13.jpg",
-        "condition": "faded",
+        "condition": "moderately_faded",
         "ground_truth": {
             "transaction_amount": 22.00,
             "transaction_date": "2026-05-11",
@@ -150,7 +150,7 @@ annotations = [
     },
     {
         "file": "receipt_14.jpg",
-        "condition": "faded",
+        "condition": "moderately_faded",
         "ground_truth": {
             "transaction_amount": 8.00,
             "transaction_date": "2026-05-10",
@@ -159,10 +159,10 @@ annotations = [
             "expense_category": "food"
         }
     },
-    # ── WITHERED ───────────────────────────────────────────
+    # ── HEAVILY FADED ──────────────────────────────────────
     {
         "file": "receipt_15.jpg",
-        "condition": "withered",
+        "condition": "heavily_faded",
         "ground_truth": {
             "transaction_amount": 38.00,
             "transaction_date": "2026-05-10",
@@ -173,7 +173,7 @@ annotations = [
     },
     {
         "file": "receipt_16.jpg",
-        "condition": "withered",
+        "condition": "heavily_faded",
         "ground_truth": {
             "transaction_amount": 50.00,
             "transaction_date": "2026-05-10",
@@ -184,13 +184,69 @@ annotations = [
     },
     {
         "file": "receipt_17.jpg",
-        "condition": "withered",
+        "condition": "heavily_faded",
         "ground_truth": {
             "transaction_amount": 59.00,
             "transaction_date": "2026-05-10",
             "store_branch": "7-Eleven Avida Towers Store#4245",
             "item_descriptions": ["7-CONNECT Top Up Duplicate"],
             "expense_category": "utilities"
+        }
+    },
+    # ── NEW TEST RECEIPTS ───────────────────────────────────
+    {
+        "file": "receipt_18.jpg",
+        "condition": "fresh",
+        "ground_truth": {
+            "transaction_amount": 48.00,
+            "transaction_date": "2026-05-20",
+            "store_branch": "7-Eleven Store#1891",
+            "item_descriptions": ["NaturesSDWter350ml", "MMPlainEnsymda55g"],
+            "expense_category": "food"
+        }
+    },
+    {
+        "file": "receipt_19.jpg",
+        "condition": "fresh",
+        "ground_truth": {
+            "transaction_amount": 10.00,
+            "transaction_date": "2026-05-20",
+            "store_branch": "7-Eleven Store#1891",
+            "item_descriptions": ["NaturesSDWter350ml"],
+            "expense_category": "food"
+        }
+    },
+    {
+        "file": "receipt_20.jpg",
+        "condition": "fresh",
+        "ground_truth": {
+            "transaction_amount": 12.00,
+            "transaction_date": "2026-05-24",
+            "store_branch": "7-Eleven Store#2840",
+            "item_descriptions": ["RebiscoHoneyBut32g"],
+            "expense_category": "food"
+        }
+    },
+    {
+        "file": "receipt_21.jpg",
+        "condition": "fresh",
+        "ground_truth": {
+            "transaction_amount": 20.00,
+            "transaction_date": "2026-05-24",
+            "store_branch": "7-Eleven Store#2840",
+            "item_descriptions": ["Toys and Novelty P"],
+            "expense_category": "shopping"
+        }
+    },
+    {
+        "file": "receipt_22.jpg",
+        "condition": "fresh",
+        "ground_truth": {
+            "transaction_amount": 15.00,
+            "transaction_date": "2026-05-24",
+            "store_branch": "7-Eleven Store#2840",
+            "item_descriptions": ["NaturesPur DW500ml"],
+            "expense_category": "food"
         }
     },
 ]
@@ -214,13 +270,13 @@ with open(csv_path, "w", newline="") as f:
             "condition":    a["condition"],
         })
 
-fresh    = [a for a in annotations if a["condition"] == "fresh"]
-faded    = [a for a in annotations if a["condition"] == "faded"]
-withered = [a for a in annotations if a["condition"] == "withered"]
+fresh            = [a for a in annotations if a["condition"] == "fresh"]
+moderately_faded = [a for a in annotations if a["condition"] == "moderately_faded"]
+heavily_faded    = [a for a in annotations if a["condition"] == "heavily_faded"]
 
 print(f"✅ Saved {len(annotations)} annotations")
-print(f"   Fresh:    {len(fresh)}")
-print(f"   Faded:    {len(faded)}")
-print(f"   Withered: {len(withered)}")
+print(f"   Fresh:            {len(fresh)}")
+print(f"   Moderately Faded: {len(moderately_faded)}")
+print(f"   Heavily Faded:    {len(heavily_faded)}")
 print(f"   JSON: {json_path}")
 print(f"   CSV:  {csv_path}")

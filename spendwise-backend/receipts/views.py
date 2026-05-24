@@ -2,11 +2,10 @@ from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+from django.core.files.storage import default_storage
 from .models import Receipt
 from .serializers import ReceiptSerializer
-import random
-from decimal import Decimal
-from datetime import date
+from .services.ocr_service import run_ocr
 
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
@@ -20,17 +19,20 @@ def receipt_list(request):
         serializer = ReceiptSerializer(data=request.data)
         if serializer.is_valid():
             receipt = serializer.save(user=request.user)
-            
-            # Mocking ML OCR Extraction
-            # In a real scenario, this would call spendwise-ml scripts
-            receipt.extracted_amount = Decimal(str(round(random.uniform(10.0, 500.0), 2)))
-            receipt.extracted_date = date.today()
-            receipt.extracted_store = random.choice(['Starbucks', 'Walmart', 'Shell', 'McDonalds', 'SM Supermarket'])
-            receipt.extracted_category = random.choice(['food', 'beverage', 'utilities', 'others'])
-            receipt.ocr_confidence = round(random.uniform(0.8, 0.99), 2)
+
+            # Call real OCR
+            image_full_path = default_storage.path(receipt.image.name)
+            ocr_data = run_ocr(image_full_path)
+
+            receipt.raw_ocr_text = ocr_data.get('raw_ocr_text', '')
+            receipt.extracted_amount = ocr_data.get('extracted_amount')
+            receipt.extracted_date = ocr_data.get('extracted_date')
+            receipt.extracted_store = ocr_data.get('extracted_store')
+            receipt.extracted_category = ocr_data.get('extracted_category', 'others')
+            receipt.ocr_confidence = ocr_data.get('ocr_confidence', 0.0)
             receipt.status = 'pending'
             receipt.save()
-            
+
             return Response(ReceiptSerializer(receipt).data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
